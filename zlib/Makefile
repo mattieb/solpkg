@@ -1,0 +1,16 @@
+# $Id: Makefile,v 1.2 2002/08/12 17:43:54 zigg Exp $
+
+include ../GLOBAL/global.mk
+
+PACKAGE_NAME =		zlib
+PACKAGE_VERSION =	1.1.4
+
+PACKAGE_DESCRIPTION =	zlib
+PACKAGE_CATEGORY =	system
+
+CONFIGURE_ENV =		CFLAGS="${CFLAGS} -fPIC"
+CONFIGURE_ARGS =	--shared \
+			--prefix='${FAKE_DEST_VAR}${INSTALL_PREFIX}'
+BUILD_MAKE_ARGS =
+BUILD_MAKE_ENV =
+

@@ -1,0 +1,6 @@
+P SPopenssl OpenSSL
+I SUNWsshu SSH Client and utilities, (Usr)
+I SUNWsshr SSH Client and utilities, (Root)
+I SUNWsshdu SSH Server, (Usr)
+I SUNWsshdr SSH Server, (Root)
+I SUNWsshcu SSH Common, (Usr)

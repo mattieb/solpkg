@@ -1,0 +1,15 @@
+Build notes for SPopenssh
+
+- You must have SPopenssl built and installed.
+
+- You must have /dev/random.  Some possibilities:
+
+  SUNWski (available as part of one of patches 106754-01, 106755-01, or
+  106756-01; rumored to only work in 32 bit mode)
+
+  ANDIrand <http://www.cosy.sbg.ac.at/~andi/>
+
+  Solaris 8 random driver (patch 112438-01 for SPARC, 112439-01 for x86)
+
+$Id: README,v 1.2 2002/07/08 17:30:25 zigg Exp $
+

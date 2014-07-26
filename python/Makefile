@@ -1,0 +1,24 @@
+# $Id: Makefile,v 1.4 2002/10/24 14:44:45 zigg Exp $
+
+include ../GLOBAL/global.mk
+
+PACKAGE_NAME =		python
+PACKAGE_VERSION =	2.1.3
+
+PACKAGE_DESCRIPTION =	Python
+PACKAGE_CATEGORY =	utility
+
+DIST_FILES =		Python-${PACKAGE_VERSION}.tgz
+
+WORK_SOURCE =		${WORK_DIRECTORY}/Python-${PACKAGE_VERSION}
+
+CONFIGURE_ENV =		OPT="${CFLAGS}"
+BUILD_MAKE_ARGS =
+FAKE_MAKE_ARGS +=	MANDIR="${FAKE_DIRECTORY}${INSTALL_MANDIR}"
+
+post-fake:
+	cp ${WORK_SOURCE}/Tools/scripts/pydoc \
+		${FAKE_DIRECTORY}${INSTALL_PREFIX}/bin
+	chmod 755 ${FAKE_DIRECTORY}${INSTALL_PREFIX}/bin/pydoc
+	chown root:root ${FAKE_DIRECTORY}${INSTALL_PREFIX}/bin/pydoc
+
